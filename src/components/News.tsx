@@ -1,16 +1,21 @@
-import { useNavigate , useParams} from "react-router-dom";
-export default function News(value:object){
-    const navigate = useNavigate();
-    const id = useParams();
-    console.log(id);
-    return (
+import { useNavigate } from 'react-router-dom';
+import React, { FC } from 'react';
 
-        <div>
-            <h2>News</h2>
-            <button onClick={() => navigate(-1)}>Go Back</button>
-            <div>
+const News: FC<any> = ({ selectedNews }) => {
+  const navigate = useNavigate();
 
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <h2>News</h2>
+      <button onClick={ () => navigate(-1) }>Go Back</button>
+      <div key={ selectedNews.id } className="card">
+        <h4>{ selectedNews.title }</h4>
+        <h6> { selectedNews.by }</h6>
+        <p>Счетчик: { selectedNews.descendants }</p>
+        <p className="card-url"> { selectedNews.url }</p>
+      </div>
+    </div>
+  );
 }
+
+export default News;
