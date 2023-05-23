@@ -8,7 +8,7 @@ const News: FC<any> = ({ selectedNews }) => {
     <div>
       <h2>News</h2>
       <button onClick={ () => navigate(-1) }>Go Back</button>
-      <div key={ selectedNews.id } className="card">
+      <div key={ selectedNews.id } className="cardNews">
         <h4>{ selectedNews.title }</h4>
         <h6> { selectedNews.by }</h6>
         <p>Счетчик: { selectedNews.descendants }</p>

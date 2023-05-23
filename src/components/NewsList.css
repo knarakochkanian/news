@@ -46,3 +46,20 @@
   font-size: 10px;
   color: #47106b;
 }
+.cardNews{
+  max-width: 100%;
+  margin-top: 40px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: black;
+  flex: 1 0 300px;
+  padding: 20px;
+}
